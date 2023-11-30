@@ -46,3 +46,74 @@ eg. filter gives out boolean values and must be returned within the method
 
 
 
+==========================================REGEX=================================
+
+regular expression
+pattern used to match text
+finds portion of text to match patter we have specified
+
+checking vaild british currency examples
+
+must be in correct format 
+used 
+str.startsWith('poundsign') && str.includes('.')
+starts to get out of hand an is non specific, dot could be anywhere etc.
+
+to much code for the whole format
+
+regex can define patterns 
+
+
+g, global search, seaches everywhere, without it it will just find 1st one
+metacharacter, character set, eg. vowles, [aeiou], [a-g] inther range a to get
+negated set, anything that isnt used ^ symbol, includes puncuation and spaces
+
+quantifiers, Matches the specified quantity of the previous token. {1,3} will match 1 to 3. 
+{3} will match exactly 3. {3,} will match 3 or more. 
+[aeiou]{2} matches pairs, ae, ei, io, ou, finds 2 in isolation hello fails goodbye passes, 2 oo's together
+
++ matches one or more of the preceding token, allows to be individual match on its own
+[aeiou]+ finds individual match with as many of the chars as it can find
+
+\x is character thats not read literally
+
+* matches 0 or more of the preceding token, either not there or there as many times eg hello!* matches hello, hello! and hello!!!
+
+anchors, denote beginning and end, ^ match must be beginning of the string 
+
+encased in /   /
+
+/hello/ looks for that exact word
+
+2 warnings about using str.match()
+dont use it without global flag g
+if there are no matches you get null
+
+test returns true or false
+
+str.match() returns an array if matched
+
+regex follows order of the string left to right
+
+/([aeiou]+)/ would find vowel within brackets
+
+. matches any character
+to literally look for . put \ before it \.
+\d{2} to seach for 2dp after the \.
+the 3dp one still works
+$ makes the regex look for end of string and stop searching
+/^£\d+\.\d{2}$/
+was full command to find starts with £, then has numbers, then a . then only 2 numbers after the .
+
+^ means start or means !not when in square brackets [^]
+
+
+
+
+
+
+
+
+
+
+
