@@ -1,0 +1,48 @@
+understand when runtime errors occour
+interpret console and stack traces
+understand strategy for debugging 
+use console.log
+
+1st line off error output
+shows filepath, where the error has occoured, might not be in the file you ran, may be a file you have linked to, location of error and line of error is shown
+
+2nd line error is printed in the error log, shows what is going wrong in more details
+
+rest can be syntax error etc. and more under the hood stuff inthe stack trace
+
+these are hints about what the problem is
+
+syntax checks happen 1st
+
+errors are on MDN site, can give more information
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors
+
+
+reference error is a runtime error, happens when the code is executed
+it gets stopped if it comes up against an error
+stack trace can show which method is causing an error, the line of the error etc.
+
+stack shows the state of the calstack when the error happens
+
+
+examples of errors
+
+cannot read process of undefined (resing 'toString')
+error is when trying to invoke the tostring method
+
+console.log before the error to see whatdata type it is and if it is undefined or not
+
+follow the error back to the source and check with console.logs
+at some point there will be a part where the input goes into a function and comes out with an error
+
+need to know what to be expecting out of the methods (eg. boolean values/numbers/strings)  and weather the values from the methods should be returned
+eg. filter gives out boolean values and must be returned within the method
+
+- solve one error at the time bit by bit
+- use the console output where relevent for help
+- used console.log to hone in on the location of the problem (error could be in one place but problem elsewhere)
+
+
+
+
+
